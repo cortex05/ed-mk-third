@@ -1,6 +1,8 @@
+@import '../styles.scss';
+
 .navbar {
   /* width: 100%; */
-  background-color: var(--black);
+  background-color: $black;
   color: white;
   padding: 20px;
   /* display: flex;
