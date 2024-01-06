@@ -4,6 +4,7 @@ $background-color: #242424;
 .home {
   color: $color;
   background-color: $background-color;
+  padding: 20px;
 }
 
 // "dev": "concurrently \"npm run server\" \"cd frontend && npm run dev\""

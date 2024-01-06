@@ -1,0 +1,24 @@
+.navbar {
+  /* width: 100%; */
+  background-color: var(--black);
+  color: white;
+  padding: 20px;
+  /* display: flex;
+  justify-content: space-between; */
+}
+
+.navbar .navlink {
+  padding-right: 20px;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar .navlink:hover {
+  color: teal;
+}
+#current-course-link {
+  padding: 5px;
+  background-color: rgb(37, 142, 255);
+  color: white;
+  text-decoration: none;
+}
