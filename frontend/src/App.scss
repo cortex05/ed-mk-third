@@ -5,3 +5,5 @@ $background-color: #242424;
   color: $color;
   background-color: $background-color;
 }
+
+// "dev": "concurrently \"npm run server\" \"cd frontend && npm run dev\""
