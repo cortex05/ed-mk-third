@@ -1,0 +1,51 @@
+@import '../styles.scss';
+
+.subjects-screen {
+  margin: 0;
+  height: 100vh;
+  background-color: $grey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+ 
+.subjects-screen .subjects-field {
+  /* display: flex;
+  flex-direction: row; */
+}
+
+.subjects-screen h3 {
+  font-size: larger;
+}
+
+.subjects-screen .subjects-field .subject-button {
+  border: 2px solid black;
+  background-color: $light_highlight;
+  padding: 15px;
+  width: 70%;
+  text-align: center;
+  /* margin: 20px; */
+}
+
+/* SUBJECT SWITCH */
+.switch {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.switch h2 {
+  margin: 0;
+}
+
+.grade-subject-link {
+  border: 2px solid black;
+  background-color: $light_highlight;
+  padding: 10px;
+  margin: 16px 0;
+  width: 70%;
+  /* text-align: center; */
+  /* display: flex;
+  flex-direction: column;
+  align-items: center; */
+}

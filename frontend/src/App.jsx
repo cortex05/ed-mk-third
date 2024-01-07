@@ -8,6 +8,7 @@ import Home from './screens/HomeScreen'
 import About from './screens/AboutScreen'
 import Stats from './screens/StatsScreen'
 import GradeLevels from './screens/GradeLevels'
+import Subjects from './screens/Subjects'
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
         <Route exact path='/aboutus' element={<About />} />
         <Route exact path='/mystats' element={<Stats />} />
         <Route exact path='/gradelevels' element={<GradeLevels />} />
+        <Route exact path='/subjects' element={<Subjects />} />
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>
