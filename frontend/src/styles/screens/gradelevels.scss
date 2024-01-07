@@ -1,0 +1,16 @@
+@import '../styles.scss';
+
+.grade-level {
+  height: 100vh;
+  background-color: $light_highlight;
+}
+ 
+.level-selector {
+  background-color: $grey;
+  padding: 10px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
