@@ -1,0 +1,74 @@
+@import '../styles.scss';
+
+.stats {
+  width: 100vw;
+  /* background-color: aqua; */
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  /* padding: ;
+   */
+   margin: auto 0;
+   color: $dark;
+
+}
+
+.stats section {
+  /* background-color: green; */
+  width: 80%;
+  height: 200px;
+  display: flex;
+}
+
+.rows_display {
+  flex-direction: row;
+}
+
+.sample_one {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.left_to_right {
+  width: 100%;
+  border: 2px solid black;
+}
+
+.one {
+  background-color: $primary;
+}
+
+.two {
+  background-color: $dark;
+}
+
+.three {
+  background-color: $grey;
+}
+
+.four {
+  background-color: $light_highlight;
+}
+
+.five {
+  background-color: $steel;
+}
+
+.six {
+  background-color: $dark_highlight;
+  color: white;
+}
+
+.header_dimmensions {
+  text-align: center;
+}
+
+.body_dimmensions {
+  padding: 10px;
+}
+
+.detail_dimmensions {
+  padding: 3px;
+}
