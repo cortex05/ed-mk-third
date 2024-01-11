@@ -1,10 +1,10 @@
 const mongoose = require('mongoose')
 
-const SubjectSchema = new mongoose.Schema(
+const CourseSchema = new mongoose.Schema(
   {
     name: {
       type: String,
-      required: [true, 'Name of subject please.']
+      required: [true, 'Name of course please.']
     },
     units: [
       {
@@ -55,4 +55,4 @@ const SubjectSchema = new mongoose.Schema(
   }
 )
 
-module.exports = mongoose.model('Subject', SubjectSchema)
+module.exports = mongoose.model('Course', CourseSchema)
