@@ -9,10 +9,16 @@ import About from './screens/AboutScreen'
 import Stats from './screens/StatsScreen'
 import GradeLevels from './screens/GradeLevels'
 import Subjects from './screens/Subjects'
+import { useReducer } from 'react';
+import { initialState, reducer } from './state/reducer'
+import { State, StateDispatch } from './state/state'
+// import { store } from './state/store'
 
 function App() {
-
+  const [state, dispatch] = useReducer(reducer, initialState)
   return (
+    <State.Provider value={state}>
+    <StateDispatch.Provider value={dispatch}>
     <Router>
       <Navbar />
       <Routes>
@@ -24,6 +30,8 @@ function App() {
         <Route path="*" element={<Home />} />
       </Routes>
     </Router>
+    </StateDispatch.Provider>
+    </State.Provider>
   )
 }
 

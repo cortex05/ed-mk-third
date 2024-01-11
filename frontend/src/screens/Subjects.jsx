@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useContext } from 'react'
 // import SubjectSwitchComponent from '../components/subjects/SubjectSwitchComponent'
 // import { setActiveSubject, getCourseSummaries } from '../features/course/courseSlice'
+import { State, StateDispatch } from '../state/state'
+import { setTest } from '../state/actions'
 
 import '../styles/screens/subjects.scss'
 
 export default function Subjects() {
+  const state = useContext(State)
+  const dispatch = useContext(StateDispatch)
   // const { activeSubject } = useSelector(state => state.course)
   // const dispatch = useDispatch()
   
@@ -18,13 +22,15 @@ export default function Subjects() {
   // }, [])
 
   const handleSelect = (selection) => {
-    setShowSubject(true)
-    setLocalSubject(selection)
+    // setShowSubject(true)
+    // setLocalSubject(selection)
+    dispatch(setTest("ACTIVATE!"))
     // dispatch(setActiveSubject(selection))
     // dispatch(getCourseSummaries(selection.toLowerCase()))
   }
   return (
     <div className='subjects-screen'>
+    <h1>The state for test is: {state.test}</h1>
     {
       !showSubject &&
       <div className='inner subjects-field'>
