@@ -6,6 +6,13 @@ const CourseSchema = new mongoose.Schema(
       type: String,
       required: [true, 'Name of course please.']
     },
+    courseId: {
+      type: String
+      // required: [true, 'Needs course identifier ie ALEGBRA_1']
+    },
+    new: {
+      type: String
+    },
     units: [
       {
         id: {
