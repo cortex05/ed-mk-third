@@ -10,9 +10,6 @@ const CourseSchema = new mongoose.Schema(
       type: String
       // required: [true, 'Needs course identifier ie ALEGBRA_1']
     },
-    new: {
-      type: String
-    },
     units: [
       {
         id: {
@@ -46,7 +43,7 @@ const CourseSchema = new mongoose.Schema(
               required: [true, 'To video or document?']
             },
             id: {
-              type: String,
+              type: Number,
               required: [true, 'Match index']
             },
             url: {
