@@ -10,7 +10,7 @@ export default function SubjectSwitchComponent({subject}) {
   const [subjectCourseSummaries, setSubjectCourseSummaries] = useState([])
   useEffect(() => {
     setSubjectCourseSummaries(temporarySubjectFetch())
-  })
+  }, [])
   const navigate = useNavigate()
 
   const handleRedirect = (order, course) => {
