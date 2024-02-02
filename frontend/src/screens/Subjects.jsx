@@ -1,5 +1,5 @@
-import React, { useState, useContext } from 'react'
-// import SubjectSwitchComponent from '../components/subjects/SubjectSwitchComponent'
+import React, { useState, useContext, useEffect } from 'react'
+import SubjectSwitchComponent from '../components/subjects/SubjectSwitchComponent'
 // import { setActiveSubject, getCourseSummaries } from '../features/course/courseSlice'
 import { State, StateDispatch } from '../state/state'
 import { setTest } from '../state/actions'
@@ -13,17 +13,20 @@ export default function Subjects() {
   // const dispatch = useDispatch()
   
   const [showSubject, setShowSubject] = useState(false)
-  // const [subjectSelection, setLocalSubject] = useState(activeSubject)
+  const [subjectSelection, setLocalSubject] = useState('')
 
   // useEffect(() => {
   //   if(activeSubject){
   //     setShowSubject(true)
   //   }
   // }, [])
+  useEffect(() => {
+    
+  })
 
   const handleSelect = (selection) => {
-    // setShowSubject(true)
-    // setLocalSubject(selection)
+    setShowSubject(true)
+    setLocalSubject(selection)
     dispatch(setTest("ACTIVATE!"))
     // dispatch(setActiveSubject(selection))
     // dispatch(getCourseSummaries(selection.toLowerCase()))
@@ -36,11 +39,15 @@ export default function Subjects() {
       <div className='inner subjects-field'>
         <h1 className='sans'>Select a Subject</h1>
         <h4 className='subject-button' onClick={() => handleSelect("Math")} >Math</h4>
-        <h4 className='subject-button' onClick={() => handleSelect("English")}>English</h4>
-        <h4 className='subject-button' onClick={() => handleSelect("Science")}>Science</h4>
-        <h4 className='subject-button' onClick={() => handleSelect("Economics")}>Economics</h4>
       </div>
       
+    }
+    {
+      showSubject && 
+      <div className='inner'>
+        <SubjectSwitchComponent subject={subjectSelection}/> 
+        <h5 onClick={() => setShowSubject(false)} className="navigation-button">Pick a different subject</h5>
+      </div>
     }
       
     </div>
