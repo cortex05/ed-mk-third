@@ -13,22 +13,23 @@ const addCourse = asyncHandler(async (req, res) => {
 
   const course = await Course.create({
     name: req.body.name,
+    courseId: req.body.courseId,
     units: req.body.units
   })
 
   res.status(200).json(course)
 })
 
-// @description     Get goals
-//@route             GET /api/goals/:gradeorder
+// @description     Get Specific course
+//@route             GET /api/course/:courseId
 // @access          Public
-// const getSchoolYear = asyncHandler(async (req, res) => {
-//   const schoolYear = await Year.find({ order: req.params.gradeorder})
+const getSpecificCourse = asyncHandler(async (req, res) => {
+  const specificCourse = await Course.find({ courseId: req.params.courseId})
 
-//   res.status(200).json(schoolYear)
-// })
+  res.status(200).json(specificCourse)
+})
 
 module.exports = {
-
-  addCourse
+  addCourse,
+  getSpecificCourse
 }
