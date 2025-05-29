@@ -17,7 +17,7 @@ app.use(function(req, res, next) {
   next();
 });
 
-
+console.log("Test!!!!!")
 // app.use('/api/year', require('./routes/yearRoutes'))
 // app.use('/api/explanations', require('./routes/explanationRoutes'))
 app.use('/api/courses', require('./routes/courseRoutes'))
